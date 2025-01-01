@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perdóname</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fc;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #4a90e2;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        .heart {
+            font-size: 3rem;
+            color: #e74c3c;
+            animation: beat 1s infinite;
+        }
+        @keyframes beat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        button {
+            background: #4a90e2;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #357ab7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Perdóname</h1>
+        <p>No quiero que los problemas nos ganen, ni quiero que estés molesta. Mi ansiedad no es excusa, pero es porque no quiero perderte.</p>
+        <p>Si pudiera, cambiaría todo de mí para ser perfecto para ti. Perdón por mis errores, y por favor, hablemos. No quiero que estemos sin hablarnos.</p>
+        <p class="heart">❤️</p>
+        <button onclick="alert('Gracias por darme una oportunidad. Te quiero.')">Hablemos</button>
+    </div>
+</body>
+</html>
