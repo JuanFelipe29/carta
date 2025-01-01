@@ -9,30 +9,33 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f7fc;
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);
             color: #333;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            overflow: hidden;
         }
         .container {
-            background: #fff;
+            background: rgba(255, 255, 255, 0.9);
             padding: 2rem;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             text-align: center;
             max-width: 400px;
             width: 100%;
+            animation: fadeIn 1.5s ease;
         }
         h1 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: #4a90e2;
             margin-bottom: 1rem;
         }
         p {
-            font-size: 1rem;
-            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #555;
         }
         .heart {
             font-size: 3rem;
@@ -42,6 +45,10 @@
         @keyframes beat {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.1); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         button {
             background: #4a90e2;
@@ -56,15 +63,50 @@
         button:hover {
             background: #357ab7;
         }
+        .animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .animation span {
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            animation: move 5s linear infinite;
+        }
+        @keyframes move {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 <body>
+    <div class="animation">
+        <span style="left: 10%; animation-duration: 4s; animation-delay: 0s;"></span>
+        <span style="left: 30%; animation-duration: 5s; animation-delay: 1s;"></span>
+        <span style="left: 50%; animation-duration: 3s; animation-delay: 2s;"></span>
+        <span style="left: 70%; animation-duration: 6s; animation-delay: 0.5s;"></span>
+        <span style="left: 90%; animation-duration: 4.5s; animation-delay: 1.5s;"></span>
+    </div>
     <div class="container">
-        <h1>Perdóname</h1>
-        <p>No quiero que los problemas nos ganen, ni quiero que estés molesta. Mi ansiedad no es excusa, pero es porque no quiero perderte.</p>
-        <p>Si pudiera, cambiaría todo de mí para ser perfecto para ti. Perdón por mis errores, y por favor, hablemos. No quiero que estemos sin hablarnos.</p>
+        <h1>Te amo</h1>
+        <p>No quiero que nuestras discusiones nos alejen. Lo último que quiero es perder lo que tenemos.</p>
+        <p>Eres lo más importante para mí, y haré todo lo posible para mejorar. Perdón por mis errores, y gracias por estar aquí conmigo.</p>
         <p class="heart">❤️</p>
-        <button onclick="alert('Gracias por darme una oportunidad. Te quiero.')">Hablemos</button>
+        <button onclick="alert('Te amo con todo mi corazón. Hablemos y arreglemos esto juntos.')">Hablemos</button>
     </div>
 </body>
 </html>
